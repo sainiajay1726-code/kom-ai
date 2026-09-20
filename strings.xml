@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">KOM AI</string>
+    <string name="kom_ai_server_url">https://YOUR-KOM-AI-URL.onrender.com</string>
+</resources>
