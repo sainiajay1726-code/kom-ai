@@ -169,7 +169,7 @@ async function githubListDirectory(directoryPath = '') {
   }
 
   const suffix = cleanPath
-    ? /${cleanPath}
+    ? '/' + cleanPath
     : '';
 
   const data = await githubRequest(
