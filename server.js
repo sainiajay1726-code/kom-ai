@@ -305,7 +305,7 @@ async function executeTool(name, args) {
     );
   }
 
-  throw new Error(Unknown tool: ${name});
+ throw new Error("Unknown tool: " + name); 
 }
 
 async function runAgent(message) {
