@@ -13,7 +13,7 @@ const openai = API_KEY ? new OpenAI({ apiKey: API_KEY }) : null;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const publicDir = path.join(__dirname, '..', 'public');
+const publicDir = __dirname;
 
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));
