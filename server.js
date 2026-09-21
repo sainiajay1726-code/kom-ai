@@ -123,7 +123,7 @@ async function githubGetFile(filePath) {
   const cleanPath = safeRepoPath(filePath);
 
   const data = await githubRequest(
-    /repos/${encodeURIComponent(GITHUB_OWNER)}/${encodeURIComponent(GITHUB_REPO)}/contents/${cleanPath}?ref=${encodeURIComponent(GITHUB_BRANCH)}
+  '/repos/' + encodeURIComponent(GITHUB_OWNER) + '/' + encodeURIComponent(GITHUB_REPO) + '/contents/' + cleanPath + '?ref=' + encodeURIComponent(GITHUB_BRANCH)  
   );
 
   if (Array.isArray(data)) {
