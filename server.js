@@ -39,7 +39,7 @@ const __dirname =
   path.dirname(__filename);
 
 const publicDir =
-  path.join(__dirname, 'public');
+  __dirname;
 
 app.use(cors());
 
