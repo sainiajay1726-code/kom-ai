@@ -76,11 +76,11 @@ async function githubRequest(endpoint, options = {}) {
     throw new Error('GitHub integration is not configured in Render environment variables.');
   }
 
-  const response = await fetch(`https://api.github.com${endpoint}`, {
+  const response = await fetch('https://api.github.com' + endpoint, {
   ...options,
   headers: {
     Accept: 'application/vnd.github+json',
-    Authorization: `Bearer ${GITHUB_TOKEN}`,
+    Authorization: 'Bearer ' + GITHUB_TOKEN,
     'X-GitHub-Api-Version': '2026-03-10',
     'Content-Type': 'application/json',
     ...(options.headers || {})
