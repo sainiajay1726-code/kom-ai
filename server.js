@@ -97,9 +97,7 @@ async function githubRequest(endpoint, options = {}) {
   }
 
   if (!response.ok) {
-    throw new Error(
-      GitHub API ${response.status}: ${data?.message || text || 'Request failed'}
-    );
+  throw new Error(GitHub API ${response.status}: ${data?.message || text || 'Request failed.'});
   }
 
   return data;
